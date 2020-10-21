@@ -1,0 +1,925 @@
+/*
+Colours used:
+- darkest blue: #211BA1
+- green gold: #8C7503
+*/
+html{
+	box-sizing: border-box; 	
+}
+
+#wrapper {
+	overflow: auto;
+}
+
+body{
+	display: flex;
+	flex-flow: column;
+	margin: 0px; /* Often browsers have a 5px margin by deafult*/
+	font-family: sans-serif;
+	background-color: #f3f2f0;
+}
+
+/*------------------------HOME PAGE------------------------*/
+	.name_cont { /*container holding hannah loma above nav*/
+		width:50vw;
+		top: 1vw;
+		margin-right: auto;
+		margin-left: auto;
+		position: relative;
+		z-index: 2;	
+	}	
+
+	.name_cont h1 {
+		margin-top: 1vw;
+		font-family: helvetica;
+		color: #8C7503;
+		font-weight: 400;
+		font-size: 3.5em;
+		text-align: center;
+	}
+
+	/*Container holding header assets including nav*/
+	.header_cont { /*takes up whole screen*/
+		width: 100%;
+		height: 30vw;
+		float: right;
+		top: 10px;
+		margin: 0 auto;
+		background-color: #692222;
+		position: relative;
+		z-index: -1;
+	}
+
+	.main_img_cont_home {
+		background-color: rgb(175, 165, 146);
+		width: auto;
+		height: 55vw;
+	}
+
+	.main_img_cont_home img{
+		width: 100%;
+	}
+
+
+	.title h3 {
+		margin-top: 2vw;
+	}
+
+	.logo_cont { /*container holding main logo*/
+		width: 28%;
+		top: 8vw;
+		margin-right: auto;
+		margin-left: auto;
+		position: relative;
+		z-index: 2;	
+	}	
+
+	/*Hannah Loma text at top of page*/
+	.header_cont h1{
+		font-weight: 500;
+		font-size: 3.3em;
+		font-family: 'Raleway', sans-serif;
+		position: relative;
+		top:8%;
+		text-align: center;
+		color: #8C7503;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		z-index: 2;
+	}
+
+	/*main container for contents in home page*/
+	.home_contents {
+		display: grid;
+		width: 55vw;
+		margin: 0 auto;
+		height: 78vw;
+	}
+
+	/*paragraph for home page*/
+	.home_contents p {
+		font-family: helvetica;
+		font-size: 1.2em;
+		font-weight: 200;
+		color: rgb(85, 85, 85);
+		line-height: 1.8vw;
+	}
+
+	/*main container holding m1.jpg*/
+	.m1{
+		grid-row: 1;
+		grid-column: 1;
+		width: 25vw;
+		height: 35vw;
+	}
+
+	.m1 img{
+		width:25vw;
+	}
+
+	.m1_text{
+		grid-row: 1;
+		grid-column: 2;
+		margin-left:0vw;
+		padding-top: 1vw;
+		width: 26vw;
+		height: 33vw;
+	}
+
+	.m2{
+		grid-row: 2;
+		grid-column: 2;
+		margin-left: 0vw;
+		margin-top: 2.5vw;
+		width: 25vw;
+		height: 35vw;
+	}
+
+	.m2 img{
+		width:25vw;
+		height: 32vw;
+		margin-left: 2.5vw;
+	}
+
+	.m2_text{
+		grid-row: 2;
+		grid-column: 1;
+		margin-left:0vw;
+		margin-top: 2.5vw;
+		width: 26vw;
+		height: 30vw;
+	}
+
+	.m2_text h4 {
+		width: 25vw;
+		font-size: 1.7em;
+		font-weight: 300;
+		color: #8C7503;
+		font-family: helvetica;
+		margin-top: 6.5vw;
+		text-align: left;
+	}
+
+
+	/*MOBILE VIEW*/
+	/*view zoomed @ 100% in browser while it is at least at max-width 550px*/
+	/*HOME PAGE*/
+	@media only screen and (max-width: 550px) {
+		.name_cont h1 {
+			font-size: 3em;
+		}
+
+		nav a {
+			font-size:0.8em;
+		}
+		
+		.title h3 {
+			padding-right: 2vw;
+			padding-top: 4%;
+			text-align: center;
+			color: #8C7503;
+		} 
+		/*main container for contents in home page*/
+		.home_contents {
+			display: grid;
+			width: 90vw;
+			margin: 0 auto;
+			height: 400vw;
+		}
+	
+		.m1 img{
+			width:90vw;
+		}
+
+		.m1_text{
+			grid-row: 1;
+			grid-column: 2;
+			margin-left: -90vw;
+			padding-top: 120vw;
+			width: 90vw;
+			height: 33vw;
+		}
+
+		/*paragraph for home page*/
+		.home_contents p {
+			font-family: helvetica;
+			font-size: 1.2em;
+			font-weight: 200;
+			color: rgb(85, 85, 85);
+			line-height: 5vw;
+		}
+
+		.m2 img{
+			width:90vw;
+			height: 120vw;
+			margin-left: -90vw;
+			margin-top: 18vw;
+		}
+	
+		.m2_text{
+			grid-row: 2;
+			grid-column: 1;
+			margin-left:0vw;
+			margin-top: 1vw;
+			width: 90vw;
+			height: 30vw;
+		}
+		
+		.m2_text h4{
+			margin-top: -40vw;
+		}
+
+
+		/*REFLECTION MAIN HOME PAGE*/
+		.title p {
+			width: 60vw;
+		}
+		
+
+		.ref_list {
+			width: 90vw;
+			margin-top: 18vw;
+		}
+
+		.ref_list img {
+			display: none;
+		}
+
+		.heading_work p{
+			display: none;
+		}
+
+		.heading_work h4 {
+			left: -100px;
+			margin-left: -20vw;
+			padding-top: 15vw;
+			text-align: center;
+		}
+		
+		
+		footer {
+			width: 90vw;
+			text-align: center;
+			margin-left: 5vw;
+		}
+	}
+
+
+
+
+
+
+
+
+/*-------------------REFLECTION PAGE-----------------*/
+.top_cont {
+	text-align: center;
+	/*height: 11.2vw;*/
+	height: 3%;
+	background-color: rgb(247, 247, 247);
+	-webkit-box-shadow: 0px 11px 16px -9px rgba(194,194,194,1);
+	-moz-box-shadow: 0px 11px 16px -9px rgba(194,194,194,1);
+	box-shadow: 0px 11px 16px -9px rgba(194,194,194,1);
+}
+
+.logo_cont2 { /*container holding main logo*/
+	width: 6vw;
+	top: 1vw;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	z-index: 2;	
+}	
+
+.top_cont hr {
+	margin-top: 1.7vw;
+	background-color:#dfddd1;
+	height: 1.1px;
+	border: none;
+}
+
+/*-NAVIGATION-*/
+.top_cont nav{
+	top: -0.1vw;
+	position: relative;
+	text-align: center;
+}
+
+.top_cont nav ul li {
+	list-style-type: none;
+	display: inline;
+	padding-right: 30px;
+	padding-left: 30px;
+	font-size:1.3em;
+	font-weight: 500;
+}
+
+.top_cont nav a{
+	color: #8C7503;
+	position: relative;
+	line-height:3vw;
+	text-decoration: none;
+	
+}
+
+.top_cont nav a:hover{
+	/* Hover styles to let people know they can click it */
+	border-bottom: 2px solid #211BA1;
+	transition: 0.04s ease-in-out;
+	text-decoration: none;
+	color: #211BA1;
+}
+
+
+/*----------BODY MAIN CONTENTS for reflection page contents page----------*/
+/*container for row grid*/
+.ref_list {
+	position: relative;
+	width: auto;
+	height: 1400px;
+	padding-top: 2vw;
+	padding-bottom: 3vw;
+	display: grid;
+}
+
+
+.title h3 {
+	padding-right: 23vw;
+	padding-left: 22.5vw;
+	padding-top: 4%;
+	font-size: 3.4em;
+	font-weight: 400;
+	font-family: helvetica;
+	color: #8C7503;
+} 
+
+.title p {
+	font-size: 1.5em;
+	font-family: helvetica;
+	font-weight: 200;
+	color: rgb(70, 70, 70);
+	margin-left: 22.7vw;
+	margin-right: 23vw;
+	margin-top: -3vw;
+}
+
+.ref_list p {
+	padding-right: 23vw;
+	padding-left: 23vw;
+	padding-top: 10%;
+}
+
+/* any div that starts with .ref# is a container for each reflection section*/
+.ref1 {
+	grid-row: 1;
+	height: 220px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.w1 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w1 img {
+ width: 28vw;
+ height: 13vw;
+ margin-top: 0.9vw;
+ margin-bottom: 0.9vw;
+ margin-left: 1vw;
+}
+
+
+.ref2 {
+	grid-row: 2;
+	height: 220px;
+	width: 55vw;
+	margin-top: 5vw;
+	margin: 0 auto;
+}
+
+.w2 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w2 img {
+	width: 28vw;
+	height: 13vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+   }
+
+.ref3 {
+	grid-row: 3;
+	height: 220px;
+	width: 55vw;
+	margin-top: 5vw;
+	margin: 0 auto;
+}
+
+.w3 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color:#fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w3 img {
+	width: 28vw;
+	height: 13vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+   }
+
+.ref4 {
+	grid-row: 4;
+	height: 220px;
+	width: 55vw;
+	margin-top: 5vw;
+	margin: 0 auto;
+}
+
+.w4 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color:#fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w4 img {
+	width: 28vw;
+	height: 13vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+   }
+
+.ref5 {
+	grid-row: 5;
+	height: 220px;
+	width: 55vw;
+	margin-top: 5vw;
+	margin: 0 auto;
+}
+
+.w5 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w5 img {
+	width: 28vw;
+	height: 13vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+   }
+
+.ref6 {
+	grid-row: 6;
+	height: 220px;
+	width: 55vw;
+	margin-top: 5vw;
+	margin: 0 auto;
+}
+
+.w6 {
+	grid-row: 1;
+	height: 213px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.w6 img {
+	width: 28vw;
+	height: 13vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+   }
+
+.heading_work h4 {
+	position: relative;
+	width: 25vw;
+	font-size: 1.7em;
+	font-weight: 300;
+	color: #8C7503;
+	font-family: helvetica;
+	margin-top: -14.2vw;
+	margin-left: auto;
+	text-align: left;
+}
+
+.heading_work a {
+	color: #8C7503;
+	text-decoration: none;
+}
+
+.heading_work a:hover {
+	/* Hover styles to let people know they can click it */
+	border-bottom: 2px solid #211BA1;
+	transition: 0.04s ease-in-out;
+	text-decoration: none;
+	color: #211BA1;	
+}
+
+.heading_work p {
+	font-size: 1.2em;
+	font-family: helvetica;
+	font-weight: 200;
+	color: rgb(85, 85, 85);
+	margin-left: 7.1vw;
+	margin-top:-5vw;
+	width: 23vw;
+	line-height:1.8vw;
+}
+
+
+/*-----------------TUTORIAL PAGES--------------*/
+/*----TUTORIAL ONE PAGE----*/
+/*container for row grid*/
+.main_cont {
+	position: relative;
+	width: auto;
+	padding-top: 2vw;
+	padding-bottom: 3vw;
+	display: grid;
+}
+
+
+.main_cont p {
+	padding-right: 23vw;
+	padding-left: 23vw;
+	padding-top: 10%;
+}
+
+/* any div that starts with .ref# is a container for each reflection section*/
+.tut1_cont {
+	grid-row: 1;
+	height: 2750px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.tut1 {
+	grid-row: 1;
+	height: 2750px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.tut1 img {
+ width: 53vw;
+ height: 30vw;
+ margin-top: 0.9vw;
+ margin-bottom: 0.9vw;
+ margin-left: 1vw;
+}
+
+.content h4 {
+	position: relative;
+	width: 25vw;
+	font-size: 1.7em;
+	font-weight: 300;
+	color: #8C7503;
+	font-family: helvetica;
+	margin-top: 2vw;
+	margin-left: 1.5vw;
+	text-align: left;
+}
+
+
+.content p {
+	position: relative;
+	font-size: 1.2em;
+	font-family: helvetica;
+	font-weight: 200;
+	color: rgb(85, 85, 85);
+	margin-left: -21.5vw;
+	margin-top: -1.3vw;
+	padding-top: 1.8vw;
+	padding-bottom: 1.8vw;
+	width: 52.3vw;
+}
+
+
+/*--------TUTS PAGES---------*/
+/*Tutorial 1 page*/
+.t1_img1 img{
+	height: 38vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t1_img2 img{
+	height: 38vw;
+	margin-top: -2vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t1_img3 img{
+	margin-top: -2vw;
+	height:54vw;
+}
+
+
+/*Tutorial 3 page*/
+/* any div that starts with .ref# is a container for each reflection section*/
+.tut3_cont {
+	grid-row: 1;
+	height: 3600px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.tut3 {
+	grid-row: 1;
+	height: 3600px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+
+.tut3 img {
+	width: 53vw;
+	height: 30vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+	border: #ebe9e0 solid 1px;
+   }
+
+.t3_img2 img{
+	height: 28vw;
+	margin-top: -2vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t3_img3 img{
+	margin-top: 1vw;
+	height:46vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t3_img4 img{
+	margin-top: 1vw;
+	height:46vw;
+}
+.t3_img5 img{
+	margin-top: 1vw;
+	height:49vw;
+}
+
+
+
+/*Tutorial 5 page*/
+/* any div that starts with .ref# is a container for each reflection section*/
+.tut5_cont {
+	grid-row: 1;
+	height: 4510px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.tut5 {
+	grid-row: 1;
+	height: 4510px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.tut5 h4 {
+	width: 30vw;
+}
+
+.tut5 img {
+	width: 53vw;
+	height: 60vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+	border: #ebe9e0 solid 1px;
+   }
+
+.t5_img2 img{
+	height: 80vw;
+	margin-top: -2vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t5_img3 img{
+	margin-top: 1vw;
+	height:46vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.t5_img4 img{
+	margin-top: 1vw;
+	height:65vw;
+}
+
+
+/*home page experiments - reflection page*/
+/* any div that starts with .ref# is a container for each reflection section*/
+.home_cont {
+	grid-row: 1;
+	height: 2400px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.home {
+	grid-row: 1;
+	height:2400px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.home h4 {
+	width: 30vw;
+}
+
+.home img {
+	width: 53vw;
+	height: 30vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+	border: #ebe9e0 solid 1px;
+   }
+
+.p1 img{
+	height: 80vw;
+	margin-top: -2vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.p1_2 img{
+	margin-top: 1vw;
+	height:30vw;
+	border: #ebe9e0 solid 1px;
+}
+
+.p1_3 img{
+	margin-top: 1vw;
+	height:32vw;
+	border: #ebe9e0 solid 1px;
+}
+
+
+
+/*responsive design - reflection page*/
+/* any div that starts with .ref# is a container for each reflection section*/
+.res_cont {
+	grid-row: 1;
+	height: 2300px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.res {
+	grid-row: 1;
+	height:2300px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.res h4 {
+	width: 30vw;
+}
+
+.res img {
+	width: 53vw;
+	height: 60vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+	border: #ebe9e0 solid 1px;
+   }
+
+.p2_2 img{
+	height: 70vw;
+	margin-top: -2vw;
+	border: #ebe9e0 solid 1px;
+}
+
+
+/*javascript page - reflection page*/
+/* any div that starts with .ref# is a container for each reflection section*/
+.jav_cont {
+	grid-row: 1;
+	height: 2100px;
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.jav {
+	grid-row: 1;
+	height:2100px;
+	width: 55vw;
+	margin: 0 auto;
+	margin-top: 0.35vw;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	-moz-box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+	box-shadow: 0px 11px 16px -9px rgb(211, 211, 211);
+}
+
+.jav iframe {
+	margin-left: 0.95vw;
+	margin-top: 0.9vw;
+	width: 53vw;
+	height: 30vw;
+}
+.jav h4 {
+	width: 30vw;
+}
+
+.jav img {
+	width: 53vw;
+	height: 66vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	margin-left: 1vw;
+	border: #ebe9e0 solid 1px;
+   }
+
+
+
+
+.ref_list img{
+	border: #ebe9e1 solid 1px;
+}
+
+footer {
+	font-size: 0.9em;
+	color: rgb(119, 119, 119);
+	padding-bottom: 1.5vw;
+	padding-top: 1vw;
+	text-align: center;
+	z-index: 1;
+}
